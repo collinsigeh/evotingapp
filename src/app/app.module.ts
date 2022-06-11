@@ -9,7 +9,7 @@ import { ElectableOfficesPageComponent } from './components/electable-offices-pa
 import { VotePageComponent } from './components/vote-page/vote-page.component';
 import { VoteConfirmationPageComponent } from './components/vote-confirmation-page/vote-confirmation-page.component';
 import { ElectionListPageComponent } from './components/election-list-page/election-list-page.component';
-import { ElectionResultPageComponent } from './componnets/election-result-page/election-result-page.component';
+import { ElectionResultPageComponent } from './components/election-result-page/election-result-page.component';
 
 @NgModule({
   declarations: [
