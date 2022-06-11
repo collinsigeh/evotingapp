@@ -1,0 +1,132 @@
+{
+    "elections": [
+        {
+            "election": "2023-02-25-001",
+            "description": "2023 Presidential Election",
+            "startAt": "6 Jun 2022",
+            "endAt": "7 Jun 2022"
+        }
+    ],
+    "candidates": [
+        {
+            "candidateFor": "2023-02-25-001",
+            "party": "IPP",
+            "partyLogoUrl": "https://my-app-resources.com/logo/ipp.jpg"
+        },
+        {
+            "candidateFor": "2023-02-25-001",
+            "party": "EBP",
+            "partyLogoUrl": "https://my-app-resources.com/logo/ebp.jpg"
+        },
+        {
+            "candidateFor": "2023-02-25-001",
+            "party": "VIPP",
+            "partyLogoUrl": "https://my-app-resources.com/logo/vipp.jpg"
+        }
+    ],
+    "voters": [
+        {
+            "voterFor": "2023-02-25-001",
+            "firstName": "Ayietuoma",
+            "lastName": "Igeh",
+            "middleName": "Collins",
+            "gender": "Male",
+            "dob": "1 Oct 1960",
+            "imageUrl": "https://my-app-resources.com/images/collins.png",
+            "imageCode": "a1y2i3e4t5u6o7m8a9",
+            "fingPrintUrl": "https://my-app-resources.com/fingerprints/collins_thumb.png",
+            "fingerPrintCode": "a1y2i3e4t5u6o7m8a9",
+            "vin": 234001,
+            "pollingUnit": "lgbar001",
+            "isValidated": true,
+            "lastVerifiedAt": "9 Jun, 2022 at 02:00pm"
+        },
+        {
+            "voterFor": "2023-02-25-001",
+            "firstName": "Samson",
+            "lastName": "Okeji",
+            "middleName": "",
+            "gender": "Male",
+            "dob": "22 Dec 1960",
+            "imageUrl": "https://my-app-resources.com/images/samson.png",
+            "imageCode": "s1a2m3s4o5n6",
+            "fingPrintUrl": "https://my-app-resources.com/fingerprints/samson_thumb.png",
+            "fingerPrintCode": "s1a2m3s4o5n6",
+            "vin": 234002,
+            "pollingUnit": "lgojo004",
+            "isVerified": false,
+            "lastVerifiedAt":  "9 Jun, 2022 at 02:20pm"
+        },
+        {
+            "voterFor": "2023-02-25-001",
+            "firstName": "Shirley",
+            "lastName": "Abaegbu",
+            "middleName": "",
+            "gender": "Female",
+            "dob": "1 Jan 1963",
+            "imageUrl": "https://my-app-resources.com/images/shirley.png",
+            "imageCode": "s1h2i3l4e5y6",
+            "fingPrintUrl": "https://my-app-resources.com/finger-prints/shirley.png",
+            "fingerPrintCode": "s1h2i3l4e5y6",
+            "vin": 234003,
+            "pollingUnit": "lglek001",
+            "isVerified": false,
+            "lastVerifiedAt": ""
+        },
+        {
+            "voterFor": "2023-02-25-001",
+            "firstName": "Daniel",
+            "lastName": "Ukpong",
+            "middleName": "",
+            "gender": "Male",
+            "dob": "2 Dec 1959",
+            "imageUrl": "https://my-app-resources.com/images/daniel.png",
+            "imageCode": "d1a2n3i4e5l6",
+            "fingPrintUrl": "https://my-app-resources.com/fingerprints/daniel_thumb.png",
+            "fingerPrintCode": "d1a2n3i4e5l6",
+            "vin": 234004,
+            "pollingUnit": "lglek014",
+            "isVerified": false,
+            "lastVerifiedAt": ""
+        },
+        {
+            "voterFor": "2023-02-25-001",
+            "firstName": "Arthur",
+            "lastName": "Ogbalu",
+            "middleName": "Kenechukwu",
+            "gender": "Male",
+            "dob": "17 Mar 1954",
+            "imageUrl": "https://my-app-resources.com/images/arthur.png",
+            "imageCode": "a1r2t3h4u5r6",
+            "fingPrintUrl": "https://my-app-resources.com/finger-prints/arthur.png",
+            "fingerPrintCode": "a1r2t3h4u5r6",
+            "vin": 234005,
+            "pollingUnit": "lgajj002",
+            "isVerified": false,
+            "lastVerifiedAt": ""
+        }
+    ],
+    "votes": [
+        {
+            "voteFor": "2023-02-25-001",
+            "vin": 234001,
+            "pollingUnit": "lgbar001",
+            "votedParty": "IPP",
+            "votedAt": "9 Jun 2022 at 3:00pm"
+        },
+        {
+            "voteFor": "2023-02-25-001",
+            "vin": 234003,
+            "pollingUnit": "lglek001",
+            "votedParty": "VIPP",
+            "votedAt": "9 Jun 2022 at 3:04pm"
+        },
+        {
+            "voteFor": "2023-02-25-001",
+            "vin": 234002,
+            "pollingUnit": "lgojo001",
+            "votedParty": "IPP",
+            "votedAt": "9 Jun 2022 at 3:15pm"
+        }
+    ]
+}
