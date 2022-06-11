@@ -1,14 +1,14 @@
 <!-- Responsive navbar-->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-dark bg-success">
   <div class="container">
-      <a class="navbar-brand" routerLink="/">{{ title }}</a>
+      <a class="navbar-brand text-light" routerLink="/">{{ title }}</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-              <li class="nav-item"><a class="nav-link" routerLink="/vin-verification">Verification</a></li>
-              <li class="nav-item"><a class="nav-link" routerLink="/elections">View Results</a></li>
+              <li class="nav-item"><a class="nav-link text-light" routerLink="/vin-verification">Verification</a></li>
+              <li class="nav-item"><a class="nav-link text-light" routerLink="/elections">View Results</a></li>
               <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Help</a>
+                  <a class="nav-link dropdown-toggle  text-light" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Help</a>
                   <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                       <li><a class="dropdown-item" routerLink="/how-to-vote">How to Vote</a></li>
                       <li><a class="dropdown-item" routerLink="/how-to-monitor-elections">How to Monitor Elections</a></li>
@@ -22,3 +22,10 @@
 <div class="container">
   <router-outlet></router-outlet>
 </div>
+
+
+<footer class="mt-5 p-1 bg-light text-center small">
+  <div class="container">
+    All rights reserved &copy; 2022 AlphaDot
+  </div>
+</footer>
