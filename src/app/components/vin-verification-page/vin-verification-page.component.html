@@ -6,15 +6,16 @@
 </div>
 <div class="row my-5">
     <div class="col-md-6 offset-md-3">
-        <form>
+        <form #f="ngForm" (submit)="vinVerification(f)">
             <fieldset class="shadow bg-light p-4 m-5">
                 <div class="mb-3">
-                    <label for="name" class="form-label">Enter Your VIN:</label>
-                    <input required type="text" id="name" name="name" class="form-control">
+                    <label for="vin" class="form-label">Enter Your VIN:</label>
+                    <input required type="text" id="vin" name="vin" class="form-control" ngModel #vin="ngModel">
+                    <div *ngIf="vin.touched && !vin.valid" class="form-text" style="color: red;">Enter a valid VIN</div>
                 </div>
 
                 <div class="text-center">
-                    <button type="submit" class="btn btn-success">Continue</button>
+                    <button type="submit" class="btn btn-success" [disabled]="!f.form.valid">Continue</button>
                 </div>
             </fieldset>
         </form>

@@ -12,7 +12,7 @@ export class VoterService {
 
   constructor(private http: HttpClient) { }
 
-  getVoter(vin:string): Observable<Voter>{
-    return this.http.get<Voter>(this.appUrl+'/voters/?vin='+vin);
+  getVoter(vin:string): Observable<Voter[]>{
+    return this.http.get<Voter[]>(this.appUrl+'/voters/?vin='+vin);
   }
 }
