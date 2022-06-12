@@ -16,4 +16,8 @@ export class CandidateService {
   getCandidates(candidateFor: string): Observable<Candidate[]>{
     return this.http.get<Candidate[]>(this.appUrl+'/candidates/?candidateFor='+candidateFor);
   }
+
+  getCandidate(party: string): Observable<Candidate[]>{
+    return this.http.get<Candidate[]>(this.appUrl+'/candidates/?party='+party);
+  }
 }

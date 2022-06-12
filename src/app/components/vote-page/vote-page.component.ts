@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 
+import { VoteService } from 'src/app/services/vote.service';
 import { ElectionService } from 'src/app/services/election.service';
 import { CandidateService } from 'src/app/services/candidate.service';
 import { VerifiedVoterService } from 'src/app/services/verified-voter.service';
@@ -22,6 +23,7 @@ export class VotePageComponent implements OnInit {
   candidates: Candidate[] = [];
 
   constructor(
+    private voteService: VoteService,
     private electionService: ElectionService,
     private candidateService: CandidateService,
     private actRoute: ActivatedRoute,
@@ -42,6 +44,16 @@ export class VotePageComponent implements OnInit {
       this.pollingUnit = vvs[0].pollingUnit;
     });
     // END SAFEGUARD AGAINST UNVERIFIED VOTERS
+
+    // SAFEGUARD AGAINST REPEAT VOTE
+    this.voteService.getVotes(this.vin, this.election).subscribe(vs => {
+      if(vs.length >= 1 && vs[0].vin == this.vin){
+        alert('You voted earlier for this office.');
+        this.router.navigate(['electable-offices', this.vin, this.pollingUnit]);
+        return;
+      }
+    });
+    // END SAFEGUARD AGAINST REPEAT VOTE
 
     this.candidateService.getCandidates(this.election).subscribe(cs => {
       this.candidates = cs;
