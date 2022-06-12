@@ -10,12 +10,12 @@ class Voter{
 	imageCode?: string;
 	fingPrintURL?: string;
 	fingPrintCode?: string;
-	vin: number;
+	vin: string;
 	pollingUnit: string;
 	isVerified: boolean;
 	lastVerifiedAt: string;
 
-    constructor(voterFor: string, firstName: string, lastName: string, gender: string, dob: string, vin: number, pollingUnit: string, isVerified: boolean, lastVerifiedAt: string,  fingerPrintUrl?: string, fingerPrintCode?: string, imageUrl?: string, imageCode?: string, middleName?: string, id?: string){
+    constructor(voterFor: string, firstName: string, lastName: string, gender: string, dob: string, vin: string, pollingUnit: string, isVerified: boolean, lastVerifiedAt: string,  fingerPrintUrl?: string, fingerPrintCode?: string, imageUrl?: string, imageCode?: string, middleName?: string, id?: string){
         this._id = id;
         this.voterFor = voterFor;
         this.firstName = firstName;

@@ -11,7 +11,7 @@
                 <div class="mb-3">
                     <label for="vin" class="form-label">Enter Your VIN:</label>
                     <input required type="text" id="vin" name="vin" class="form-control" ngModel #vin="ngModel">
-                    <div *ngIf="vin.touched && !vin.valid" class="form-text" style="color: red;">Enter a valid VIN</div>
+                    <div *ngIf="vin.touched && !vin.valid" class="form-text" style="color: red;">A valid VIN is required!</div>
                 </div>
 
                 <div class="text-center">

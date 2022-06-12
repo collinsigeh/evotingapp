@@ -36,7 +36,7 @@
             "imageCode": "a1y2i3e4t5u6o7m8a9",
             "fingPrintUrl": "https://my-app-resources.com/fingerprints/collins_thumb.png",
             "fingerPrintCode": "a1y2i3e4t5u6o7m8a9",
-            "vin": 234001,
+            "vin": "234001",
             "pollingUnit": "lgbar001",
             "isVerified": true,
             "lastVerifiedAt": "9 Jun, 2022 at 02:00pm"
@@ -52,7 +52,7 @@
             "imageCode": "s1a2m3s4o5n6",
             "fingPrintUrl": "https://my-app-resources.com/fingerprints/samson_thumb.png",
             "fingerPrintCode": "s1a2m3s4o5n6",
-            "vin": 234002,
+            "vin": "234002",
             "pollingUnit": "lgojo004",
             "isVerified": false,
             "lastVerifiedAt":  "9 Jun, 2022 at 02:20pm"
@@ -68,7 +68,7 @@
             "imageCode": "s1h2i3l4e5y6",
             "fingPrintUrl": "https://my-app-resources.com/finger-prints/shirley.png",
             "fingerPrintCode": "s1h2i3l4e5y6",
-            "vin": 234003,
+            "vin": "234003",
             "pollingUnit": "lglek001",
             "isVerified": false,
             "lastVerifiedAt": ""
@@ -84,7 +84,7 @@
             "imageCode": "d1a2n3i4e5l6",
             "fingPrintUrl": "https://my-app-resources.com/fingerprints/daniel_thumb.png",
             "fingerPrintCode": "d1a2n3i4e5l6",
-            "vin": 234004,
+            "vin": "234004",
             "pollingUnit": "lglek014",
             "isVerified": false,
             "lastVerifiedAt": ""
@@ -100,7 +100,7 @@
             "imageCode": "a1r2t3h4u5r6",
             "fingPrintUrl": "https://my-app-resources.com/finger-prints/arthur.png",
             "fingerPrintCode": "a1r2t3h4u5r6",
-            "vin": 234005,
+            "vin": "234005",
             "pollingUnit": "lgajj002",
             "isVerified": false,
             "lastVerifiedAt": ""
@@ -109,21 +109,21 @@
     "votes": [
         {
             "voteFor": "2023-02-25-001",
-            "vin": 234001,
+            "vin": "234001",
             "pollingUnit": "lgbar001",
             "votedParty": "IPP",
             "votedAt": "9 Jun 2022 at 3:00pm"
         },
         {
             "voteFor": "2023-02-25-001",
-            "vin": 234003,
+            "vin": "234003",
             "pollingUnit": "lglek001",
             "votedParty": "VIPP",
             "votedAt": "9 Jun 2022 at 3:04pm"
         },
         {
             "voteFor": "2023-02-25-001",
-            "vin": 234002,
+            "vin": "234002",
             "pollingUnit": "lgojo001",
             "votedParty": "IPP",
             "votedAt": "9 Jun 2022 at 3:15pm"

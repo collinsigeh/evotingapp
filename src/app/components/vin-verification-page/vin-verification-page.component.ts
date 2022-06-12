@@ -28,7 +28,7 @@ export class VinVerificationPageComponent implements OnInit {
         this.router.navigate(['electable-offices']);
         return
       }
-      this.router.navigate(['fingerprint-verification']);
+      this.router.navigate(['fingerprint-verification', vin]);
     });
   }
 
