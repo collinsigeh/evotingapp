@@ -34,7 +34,7 @@ export class VinVerificationPageComponent implements OnInit {
       }
 
       // HANDLE FOR VERIFIED VOTERS
-      this.verifiedVoterService.getVerifiedVoter(vin, vs[0].voterFor).subscribe(vvs => {
+      this.verifiedVoterService.getVerifiedVoter(vin).subscribe(vvs => {
         if(vvs.length >= 1 && vvs[0].vin == vin){
           console.log(vvs);
           this.router.navigate(['electable-offices', vs[0].vin, vs[0].voterFor]);

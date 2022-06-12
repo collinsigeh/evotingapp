@@ -48,7 +48,7 @@ export class FingerprintVerificationPageComponent implements OnInit {
       }
 
       // HANDLE FOR VERIFIED VOTERS
-      this.verifiedVoterService.getVerifiedVoter(this.vin, this.voter[0].voterFor).subscribe(vvs => {
+      this.verifiedVoterService.getVerifiedVoter(this.vin).subscribe(vvs => {
         if(vvs.length >= 1 && vvs[0].vin == this.vin){
           console.log(vvs);
           this.router.navigate(['electable-offices', this.voter[0].vin, this.voter[0].voterFor]);

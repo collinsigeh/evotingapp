@@ -12,8 +12,8 @@ export class VerifiedVoterService {
 
   constructor(private http: HttpClient) { }
 
-  getVerifiedVoter(vin:string, votingFor: string): Observable<VerifiedVoter[]>{
-    return this.http.get<VerifiedVoter[]>(this.appUrl+'/verifiedVoters/?vin='+vin+'&votingFor='+votingFor);
+  getVerifiedVoter(vin:string): Observable<VerifiedVoter[]>{
+    return this.http.get<VerifiedVoter[]>(this.appUrl+'/verifiedVoters/?vin='+vin);
   }
 
   addVerifiedVoter(newlyVerifiedVoter: VerifiedVoter): Observable<VerifiedVoter> {
