@@ -32,10 +32,10 @@ export class FingerprintVerificationPageComponent implements OnInit {
   fingerprintValidation(form: NgForm): void{
     
     const fingerPrintCode = form.value.myImage;
+    console.log(fingerPrintCode);
 
     this.voterService.getVoter(this.vin).subscribe(vs => {
       this.voter = vs;
-      console.log(this.voter);
 
       if(this.voter.length < 1){
         alert(this.vin+": is an invalid VIN!");
@@ -44,6 +44,11 @@ export class FingerprintVerificationPageComponent implements OnInit {
       if(this.voter[0].isVerified){
         this.router.navigate(['electable-offices']);
         return
+      }
+
+      if(this.voter[0].fingerPrintCode != fingerPrintCode){
+        alert('Fingerprint Mismatch!');
+        return;
       }
   
       alert('I got here');
