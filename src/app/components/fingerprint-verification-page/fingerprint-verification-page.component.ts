@@ -51,14 +51,14 @@ export class FingerprintVerificationPageComponent implements OnInit {
         return;
       }
   
-      alert('I got here');
+      // this.voter[0].isVerified = true;
+      // this.voterService.updateVoter(this.voter[0]).subscribe(new_vs => { });
+      
+      this.router.navigate(['electable-offices']);
+      return;
   
-      //change voter status to verified if there's a match then redirect to electable-offices
   
-      //if no match redirect to fingerprint-verification stating fingerprint didn't match
-  
-  
-      this.router.navigate(['fingerprint-verification', this.vin]);
+      // this.router.navigate(['fingerprint-verification', this.vin]);
     });
   }
 
