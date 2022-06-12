@@ -116,38 +116,9 @@
     }
   ],
   "verifiedVoters": [
-    {
-      "_id": "",
-      "votingFor": "2023-02-25-001",
-      "vin": "234003",
-      "pollingUnit": "lglek001",
-      "id": 1
-    }
+    
   ],
   "votes": [
-    {
-      "id": 1,
-      "voteFor": "2023-02-25-001",
-      "vin": "234001",
-      "pollingUnit": "lgbar001",
-      "votedParty": "IPP",
-      "votedAt": "9 Jun 2022 at 3:00pm"
-    },
-    {
-      "id": 3,
-      "voteFor": "2023-02-25-001",
-      "vin": "234002",
-      "pollingUnit": "lgojo001",
-      "votedParty": "IPP",
-      "votedAt": "9 Jun 2022 at 3:15pm"
-    },
-    {
-      "voteFor": "2023-02-25-001",
-      "vin": "234003",
-      "pollingUnit": "lglek001",
-      "votedParty": "EBP",
-      "votedAt": "Election day",
-      "id": 4
-    }
+
   ]
 }
