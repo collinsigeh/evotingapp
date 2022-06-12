@@ -17,7 +17,7 @@
 
         <div class="list-group my-5">
             <div *ngFor="let election of elections">
-                <a routerLink="/election-result/{{ election.election }}" class="list-group-item list-group-item-action lead"><strong>&gt; {{ election.description }}</strong></a>
+                <a routerLink="/vote/{{ vin }}/{{ election.election }}" class="list-group-item list-group-item-action lead"><strong>&gt; {{ election.description }}</strong></a>
             </div>
             
         </div>

@@ -22,7 +22,7 @@ const routes: Routes = [
   { path: 'election-result', component: ElectionResultPageComponent},
   { path: 'elections', component: ElectionListPageComponent},
   { path: 'vote-confirmation', component: VoteConfirmationPageComponent},
-  { path: 'vote', component: VotePageComponent},
+  { path: 'vote/:vin/:election', component: VotePageComponent},
   { path: 'electable-offices/:vin/:pollingUnit', component: ElectableOfficesPageComponent},
   { path: 'fingerprint-verification/:vin', component: FingerprintVerificationPageComponent},
   { path: 'vin-verification', component: VinVerificationPageComponent},
