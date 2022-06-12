@@ -1,1 +1,25 @@
-<p>vote-page works!</p>
+<div class="float-end">
+    <a routerLink="/electable-offices/{{ vin }}/{{ pollingUnit }}" class="btn btn-outline-success btn-sm">&lt; Elections</a>
+</div>
+<div class="my-5 text-center">
+    <h3><u>{{ electionDescription }}</u></h3>
+</div>
+<div class="row my-5">
+    <div class="col-md-10 offset-md-1">
+        <div class="alert alert-primary d-flex align-items-center" role="alert">
+            <div>
+              <strong>Hint:</strong>
+              <ul>
+                  <li>Select (click) an the policitcal party you want to vote for.</li>
+              </ul>
+            </div>
+        </div>
+
+        <div class="list-group my-5">
+            <div *ngFor="let candidate of candidates">
+                <a routerLink="/vote-confirmation/{{ vin }}/{{ candidate.party }}" class="list-group-item list-group-item-action lead"><strong>&gt; {{ candidate.party }}</strong></a>
+            </div>
+            
+        </div>
+    </div>
+</div>

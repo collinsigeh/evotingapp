@@ -15,4 +15,8 @@ export class ElectionService {
   getAllElections(): Observable<Election[]>{
     return this.http.get<Election[]>(this.appUrl+'/elections');
   }
+
+  getElection(election: string): Observable<Election[]>{
+    return this.http.get<Election[]>(this.appUrl+'/elections/?election='+election);
+  }
 }

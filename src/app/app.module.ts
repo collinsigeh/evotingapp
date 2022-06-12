@@ -21,7 +21,7 @@ const routes: Routes = [
   { path: 'how-to-vote', component: HowToVotePageComponent},
   { path: 'election-result', component: ElectionResultPageComponent},
   { path: 'elections', component: ElectionListPageComponent},
-  { path: 'vote-confirmation', component: VoteConfirmationPageComponent},
+  { path: 'vote-confirmation/:vin/:party', component: VoteConfirmationPageComponent},
   { path: 'vote/:vin/:election', component: VotePageComponent},
   { path: 'electable-offices/:vin/:pollingUnit', component: ElectableOfficesPageComponent},
   { path: 'fingerprint-verification/:vin', component: FingerprintVerificationPageComponent},

@@ -1,16 +1,14 @@
 class Candidate{
-    _id: string;
-    name: string;
-    address: string;
-    age: number;
-    imageUrl?: string;
+    _id?: string;
+    candidateFor: string;
+    party: string;
+    partyLogoUrl?: string;
 
-    constructor(id: string, name: string, address: string, age: number , imageUrl?:string){
+    constructor(candidateFor: string, party: string , partyLogoUrl?:string, id?: string){
         this._id = id;
-        this.name = name;
-        this.address = address;
-        this.age = age;
-        this.imageUrl = imageUrl;
+        this.candidateFor = candidateFor;
+        this.party = party;
+        this.partyLogoUrl = partyLogoUrl;
     }
 }
 
