@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import Election from 'src/app/models/election.model';
+import { ElectionService } from 'src/app/services/election.service';
 
 @Component({
   selector: 'app-electable-offices-page',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ElectableOfficesPageComponent implements OnInit {
 
-  constructor() { }
+  elections: Election[] = [];
+
+  constructor(private electionService: ElectionService) { }
 
   ngOnInit(): void {
+    this.electionService.getAllElections().subscribe(es => {
+      this.elections = es;
+    });
   }
 
 }

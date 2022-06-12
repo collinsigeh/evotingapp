@@ -1,8 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import Voter from '../../models/voter.model'
-import { VoterService } from '../../services/voter.service';
 import { Router } from '@angular/router';
+
+
+import { VoterService } from '../../services/voter.service';
+import { VerifiedVoterService } from 'src/app/services/verified-voter.service';
+
+import Voter from '../../models/voter.model'
+import verifiedVoter from 'src/app/models/verified-voter.model';
 
 @Component({
   selector: 'app-vin-verification-page',
@@ -11,7 +16,10 @@ import { Router } from '@angular/router';
 })
 export class VinVerificationPageComponent implements OnInit {
 
-  constructor(private voterService: VoterService, private router: Router) { }
+  constructor(
+    private voterService: VoterService, 
+    private router: Router, 
+    private verifiedVoterService: VerifiedVoterService) { }
 
   ngOnInit(): void {
   }
@@ -24,10 +32,17 @@ export class VinVerificationPageComponent implements OnInit {
         alert("VIN is invalid!");
         return
       }
-      if(vs[0].isVerified){
-        this.router.navigate(['electable-offices']);
-        return
-      }
+
+      // HANDLE FOR VERIFIED VOTERS
+      this.verifiedVoterService.getVerifiedVoter(vin, vs[0].voterFor).subscribe(vvs => {
+        if(vvs.length >= 1 && vvs[0].vin == vin){
+          console.log(vvs);
+          this.router.navigate(['electable-offices', vs[0].vin, vs[0].voterFor]);
+          return;
+        }
+      });
+      // END HANDLE FOR VERIFIED VOTERS
+      
       this.router.navigate(['fingerprint-verification', vin]);
     });
   }

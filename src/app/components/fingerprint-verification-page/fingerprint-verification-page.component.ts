@@ -1,10 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import Voter from '../../models/voter.model'
-import { VoterService } from '../../services/voter.service';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { DomSanitizer } from '@angular/platform-browser';
 import { Observable, Subscriber } from 'rxjs';
+
+import { VoterService } from '../../services/voter.service';
+import { VerifiedVoterService } from '../../services/verified-voter.service';
+
+import Voter from '../../models/voter.model';
+import VerifiedVoter from 'src/app/models/verified-voter.model';
 
 @Component({
   selector: 'app-fingerprint-verification-page',
@@ -21,8 +25,9 @@ export class FingerprintVerificationPageComponent implements OnInit {
   constructor(
     private actRoute: ActivatedRoute,
     private sant: DomSanitizer,
+    private router: Router,
     private voterService: VoterService, 
-    private router: Router
+    private verifiedVoterService: VerifiedVoterService
   ) { 
     this.vin = this.actRoute.snapshot.params['vin'];
   }
@@ -41,22 +46,36 @@ export class FingerprintVerificationPageComponent implements OnInit {
         alert(this.vin+": is an invalid VIN!");
         return
       }
-      if(this.voter[0].isVerified){
-        this.router.navigate(['electable-offices']);
-        return
-      }
+
+      // HANDLE FOR VERIFIED VOTERS
+      this.verifiedVoterService.getVerifiedVoter(this.vin, this.voter[0].voterFor).subscribe(vvs => {
+        if(vvs.length >= 1 && vvs[0].vin == this.vin){
+          console.log(vvs);
+          this.router.navigate(['electable-offices', this.voter[0].vin, this.voter[0].voterFor]);
+          return;
+        }
+      });
+      // END HANDLE FOR VERIFIED VOTERS
 
       if(this.voter[0].fingerPrintCode != fingerPrintCode){
         alert('Fingerprint Mismatch!');
         return;
-      }
-  
-      // this.voter[0].isVerified = true;
-      // this.voterService.updateVoter(this.voter[0]).subscribe(new_vs => { });
+      }  
+
+      // PERSISTING VOTER VERIFICATION
+      this.voter[0].isVerified = true;
+
+      const votingFor = this.voter[0].voterFor;
+      const vin = this.voter[0].vin;
+      const pollingUnit = this.voter[0].pollingUnit;
+
+      const newlyVerifiedVoter = new VerifiedVoter(votingFor, vin, pollingUnit, '');
+
+      this.verifiedVoterService.addVerifiedVoter(newlyVerifiedVoter).subscribe();
+      // END PERSISTING VOTER VERIFICATION
       
-      this.router.navigate(['electable-offices']);
+      this.router.navigate(['electable-offices', this.voter[0].vin, this.voter[0].pollingUnit]);
       return;
-  
   
       // this.router.navigate(['fingerprint-verification', this.vin]);
     });

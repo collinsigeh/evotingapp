@@ -115,6 +115,15 @@
       "lastVerifiedAt": ""
     }
   ],
+  "verifiedVoters": [
+    {
+      "_id": "",
+      "votingFor": "2023-02-25-001",
+      "vin": "234003",
+      "pollingUnit": "lglek001",
+      "id": 1
+    }
+  ],
   "votes": [
     {
       "id": 1,

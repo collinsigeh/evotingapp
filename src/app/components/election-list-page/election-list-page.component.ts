@@ -16,7 +16,7 @@ export class ElectionListPageComponent implements OnInit {
   ngOnInit(): void {
     this.electionService.getAllElections().subscribe(es => {
       this.elections = es;
-    })
+    });
   }
 
 }
