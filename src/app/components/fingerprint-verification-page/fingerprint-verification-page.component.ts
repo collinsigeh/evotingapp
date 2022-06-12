@@ -17,18 +17,15 @@ export class FingerprintVerificationPageComponent implements OnInit {
 
   vin: string = '0';
   constructor(
-    private route: ActivatedRoute,
+    private actRoute: ActivatedRoute,
     private sant: DomSanitizer,
     private voterService: VoterService, 
     private router: Router
-  ) { }
-
-  ngOnInit(): void {
-    this.route.queryParams.subscribe(params => {
-      this.vin = params['vin'];
-      alert('I got '+this.vin)
-    });
+  ) { 
+    this.vin = this.actRoute.snapshot.params['vin'];
   }
+
+  ngOnInit(): void { }
 
   fingerprintValidation(form: NgForm): void{
     
@@ -45,6 +42,12 @@ export class FingerprintVerificationPageComponent implements OnInit {
         this.router.navigate(['electable-offices']);
         return
       }
+
+      //change voter status to verified if there's a match then redirect to electable-offices
+
+      //if no match redirect to fingerprint-verification stating fingerprint didn't match
+
+
       this.router.navigate(['fingerprint-verification', this.vin]);
     });
   }
