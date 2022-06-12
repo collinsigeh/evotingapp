@@ -16,6 +16,8 @@ export class FingerprintVerificationPageComponent implements OnInit {
   base64code!: any;
 
   vin: string = '0';
+  voter: Voter[] = [];
+
   constructor(
     private actRoute: ActivatedRoute,
     private sant: DomSanitizer,
@@ -29,25 +31,28 @@ export class FingerprintVerificationPageComponent implements OnInit {
 
   fingerprintValidation(form: NgForm): void{
     
-    const fingerCode = form.value.myImage;
-
-    console.log(fingerCode);
+    const fingerPrintCode = form.value.myImage;
 
     this.voterService.getVoter(this.vin).subscribe(vs => {
-      if(vs.length < 1){
+      this.voter = vs;
+      console.log(this.voter);
+
+      if(this.voter.length < 1){
         alert(this.vin+": is an invalid VIN!");
         return
       }
-      if(vs[0].isVerified){
+      if(this.voter[0].isVerified){
         this.router.navigate(['electable-offices']);
         return
       }
-
+  
+      alert('I got here');
+  
       //change voter status to verified if there's a match then redirect to electable-offices
-
+  
       //if no match redirect to fingerprint-verification stating fingerprint didn't match
-
-
+  
+  
       this.router.navigate(['fingerprint-verification', this.vin]);
     });
   }
@@ -56,8 +61,6 @@ export class FingerprintVerificationPageComponent implements OnInit {
     const target = $event.target as HTMLInputElement;
     
     const file: File = (target.files as FileList)[0];
-
-    console.log(file);
 
     this.convertToBase64(file);
   }
@@ -68,7 +71,6 @@ export class FingerprintVerificationPageComponent implements OnInit {
     });
 
     observable.subscribe((d) => {
-      console.log(d);
       this.myImage = d;
       this.base64code = d;
     })
