@@ -116,37 +116,9 @@
     }
   ],
   "verifiedVoters": [
-    {
-      "_id": "",
-      "votingFor": "2023-02-25-001",
-      "vin": "234001",
-      "pollingUnit": "lgbar001",
-      "id": 1
-    },
-    {
-      "_id": "",
-      "votingFor": "2023-02-25-001",
-      "vin": "234002",
-      "pollingUnit": "lgojo004",
-      "id": 2
-    }
+    
   ],
   "votes": [
-    {
-      "voteFor": "2023-02-25-001",
-      "vin": "234001",
-      "pollingUnit": "lgbar001",
-      "votedParty": "IPP",
-      "votedAt": "Election day",
-      "id": 1
-    },
-    {
-      "voteFor": "2023-02-25-001",
-      "vin": "234002",
-      "pollingUnit": "lgojo004",
-      "votedParty": "VIPP",
-      "votedAt": "Election day",
-      "id": 2
-    }
+
   ]
 }
