@@ -77,6 +77,7 @@ export class VoteConfirmationPageComponent implements OnInit {
     const newVote = new Vote(voteFor, vin, pollingUnit, votedParty, votedAt);
 
     this.voteService.addVote(newVote).subscribe(nvs => {
+      alert('Vote submited successfully!');
       this.router.navigate(['electable-offices', this.vin, this.pollingUnit]);
     });
   }

@@ -126,23 +126,9 @@
     {
       "_id": "",
       "votingFor": "2023-02-25-001",
-      "vin": "234003",
-      "pollingUnit": "lglek001",
-      "id": 2
-    },
-    {
-      "_id": "",
-      "votingFor": "2023-02-25-001",
-      "vin": "234004",
-      "pollingUnit": "lglek014",
-      "id": 3
-    },
-    {
-      "_id": "",
-      "votingFor": "2023-02-25-001",
       "vin": "234002",
       "pollingUnit": "lgojo004",
-      "id": 4
+      "id": 2
     }
   ],
   "votes": [
@@ -150,25 +136,9 @@
       "voteFor": "2023-02-25-001",
       "vin": "234001",
       "pollingUnit": "lgbar001",
-      "votedParty": "EBP",
-      "votedAt": "Election day",
-      "id": 1
-    },
-    {
-      "voteFor": "2023-02-25-001",
-      "vin": "234003",
-      "pollingUnit": "lglek001",
       "votedParty": "IPP",
       "votedAt": "Election day",
-      "id": 2
-    },
-    {
-      "voteFor": "2023-02-25-001",
-      "vin": "234004",
-      "pollingUnit": "lglek014",
-      "votedParty": "EBP",
-      "votedAt": "Election day",
-      "id": 3
+      "id": 1
     },
     {
       "voteFor": "2023-02-25-001",
@@ -176,7 +146,7 @@
       "pollingUnit": "lgojo004",
       "votedParty": "VIPP",
       "votedAt": "Election day",
-      "id": 4
+      "id": 2
     }
   ]
 }
