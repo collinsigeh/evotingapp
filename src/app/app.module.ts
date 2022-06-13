@@ -15,6 +15,7 @@ import { ElectionListPageComponent } from './components/election-list-page/elect
 import { ElectionResultPageComponent } from './components/election-result-page/election-result-page.component';
 import { HowToVotePageComponent } from './components/how-to-vote-page/how-to-vote-page.component';
 import { HowToMonitorElectionsPageComponent } from './components/how-to-monitor-elections-page/how-to-monitor-elections-page.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 const routes: Routes = [
   { path: 'how-to-monitor-elections', component: HowToMonitorElectionsPageComponent},
@@ -26,7 +27,8 @@ const routes: Routes = [
   { path: 'electable-offices/:vin/:pollingUnit', component: ElectableOfficesPageComponent},
   { path: 'fingerprint-verification/:vin', component: FingerprintVerificationPageComponent},
   { path: 'vin-verification', component: VinVerificationPageComponent},
-  { path: '', component: HomePageComponent}
+  { path: '', component: HomePageComponent},
+  { path: '**', component: NotFoundComponent }
 ]
 
 @NgModule({
@@ -41,7 +43,8 @@ const routes: Routes = [
     ElectionListPageComponent,
     ElectionResultPageComponent,
     HowToVotePageComponent,
-    HowToMonitorElectionsPageComponent
+    HowToMonitorElectionsPageComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
