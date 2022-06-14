@@ -8,6 +8,7 @@ import { VoteService } from 'src/app/services/vote.service';
 import Candidate from 'src/app/models/candidate.model';
 import { CssSelector } from '@angular/compiler';
 import Vote from 'src/app/models/vote.model';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-election-result-page',
@@ -45,6 +46,8 @@ export class ElectionResultPageComponent implements OnInit {
         this.partyVotes.push(naVote);
       });
     });
+
+    this.voteService.getVotes
   }
 
 }

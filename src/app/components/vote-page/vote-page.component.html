@@ -17,7 +17,7 @@
 
         <div class="list-group my-5">
             <div *ngFor="let candidate of candidates">
-                <a routerLink="/vote-confirmation/{{ vin }}/{{ candidate.party }}" class="list-group-item list-group-item-action lead"><strong>&gt; {{ candidate.party }}</strong></a>
+                <a routerLink="/vote-confirmation/{{ vin }}/{{ candidate.party }}" class="list-group-item list-group-item-action lead"><img src="{{ candidate.partyLogoUrl }}" alt="" class="border me-3" width="50px"><strong>{{ candidate.party }}</strong></a>
             </div>
             
         </div>
